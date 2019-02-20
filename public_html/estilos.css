@@ -1,0 +1,350 @@
+/* 
+    Created on : 22-nov-2018, 12:49:36
+    Author     : Pablo Barrado
+
+   Fuente font-family: para h1,h2,h3,h4,h5,h6 'Open Sans Condensed' , y   Cormorant para p
+   Hemos utilizado iframe para los videos y un iframe para los videos 
+
+   Estructura Web :  body 
+                      |__Cabecera   
+                                 |__logo  
+                                  h1 = Titulo de la web
+                                  h2 = Eslogan
+                      |__Contenedor  contenedor
+                                 |__ menu= ul 
+                                 |_  div barralateral   
+                                 |_  div Cuerpo
+                                        |_ article
+                                        |_ article
+                                 |_  div barralateral 
+                                 
+    Web : 
+            |_ inicio = index.html
+            |_ biografia =  biografia.html 
+               Familia  \ ancla biografia.html
+            |_ Personalidad personalidad.html 
+            |_ GrandesObras = GrandesObras.html 
+            |_ ProduccioneMusical = ProduccioneMusical.html 
+            |_ Contacto = Contacto.html 
+                \ mapa anclaContacto
+    
+    He reseteado los estilos del navegador linea * { margin:0px  ...... }
+
+    Menu , lo ponemos en linea con propiedad de bloque  inline-block .con un tamaño de 100/6 para que ocupe toda 
+    la linea ,con un alto de 40 pixeles, 
+     Para el estilo con el raton sobre el el menu hover  y clse utilizamos fondo oscuro y letra blanca
+
+    Las imagenes del cuerpo están en float y un con un margen
+	
+	Establecermos la #cabecera, #contenedor y el cuerpo un ancho de 1024px y margin 0 auto para establecerlo en medio
+	Establecermos .barralateral float a la izquierda  y con un ancho de 15% 
+
+*/
+
+/* Reseteamos los estilos del navegador
+*/
+* { margin: 0px; padding: 0px; list-style: none; text-decoration: none; border: none; outline: none; font-family: 'Montserrat', serif;}
+
+.menu li {
+    display: inline-block;
+    background: #f1e2a1;
+    width: 16.18%;
+    height: 40px;
+}
+.menu li a {
+    color: #020202;
+    background: #f5f5f5;
+    min-width: 100px;
+    padding: 9px;
+    height: 21px;
+    display: block;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1em;
+}
+.menu { margin-left: 1px;}
+.menu li a + ul {    display: none;}         
+.menu li a:hover + ul, .menu li a + ul:hover {      z-index: 2; display: block; float: left; width: 16.18%;  position: absolute; top: 188px; }             
+.menu li a:hover, .menu li:hover .firsta, .menu li a.active {background: #fdeb9f;} 
+.menu li ul li { width: 200px;}
+.menu {  background: #ffffff;  margin: 0px 0px 15px 0px;}
+
+#Cabecera   {   width: 100%; height:150px;   margin: 0 auto;   background: #ffffff; position: relative;}
+#contenedor {    max-width: 1250px;    margin: 0 auto;}
+.cuerpo {width: 80%; float: left;}
+.barralateral { margin-top: 10px; background: #e8e8e8; line-height: 2em; width: 19%; float: left;  font-size: 12px; padding:0px;}
+.barralateral a { font-size: 1.2em; color: #3a3636;}
+.imglogo { float: left;     padding:0px 30px 0px 60px;}
+.imglogo img {    height: 136px; margin:0px;}
+
+.divTop {    width: 49%;    height: 200px;    display: inline-block;}
+.divTop iframe {    width: 100%;  min-height: 200px;}
+
+.img_retrato { float: left; margin: 0px 20px 20px 20px;}
+article { margin-bottom: 20px; float:left;}
+#biografia { color: #444; text-shadow: 0px 1px 8px #ddd; font-family: 'Dosis';}
+.cuerpo h3  {  display: grid; border-radius: 10px 10px 10px; margin:0px 0px 40px 4px; padding: 5px 20px; background: #fbfbfb;
+             font-size: 1.5em;  }
+.cuerpo h4 {
+    margin: 0px 0px 20px 0px;
+    padding: 5px;
+    background: #fbfbfb;
+    border: 1px solid #e8e8e8;
+    font-size: 1.1em;
+    display: grid;
+    border-radius: 20px 10px 10px;
+    padding: 10px;
+}
+
+.pie {   margin: 40px 0px 0px 0px; float: left; width: 100%;  padding: 10px;  text-align: center;  font-size: 12px;  border-top: 1px dotted #444;}
+.cuerpo p {
+    font-weight: lighter !important;
+    columns: 1;
+    text-align: justify;
+    font-size: 1em;
+    color: #353434;
+    text-indent: 25px;
+    margin-bottom: 14px;
+    line-height: 1em;
+}
+.cuerpo p a { font-size: 1.11em;    color: #006ab7; text-decoration: underline;}
+input,  textArea {  cursor: text;  padding: 1px;  border-width: 2px;  border-style: inset;  border-color: initial;  border-image: initial;}
+.art_contacto label {   width: 83px;  display: inline-block;  float: left;  text-align: left;}
+.img_sello {    width: 95%;    height: auto; margin-bottom:5px; margin-top: 20px;}
+
+ul.noenlaces li {   margin-bottom: 13px;    margin-top: 10px;}
+
+.bloque h3 {
+    margin-bottom: 20px;
+    background: #f7f7f7;
+    padding: 4px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    border: 1px #fffefc;
+    border-style: outset; font-weight: bold;
+}
+form#formregistro { margin: 30px 0px; width: 45%;  float: left;}
+article {
+    padding: 5px 40px;
+    margin: 5px 10px;
+}
+article.art_contacto { width: 99%; }
+h1 {  background: #e8e8e8;  color: #505050;  padding: 20px;}
+h2 { background: #f7f7f7; padding: 2px; border-top: 1px solid #755050;     font-weight: 100;}
+h1,h2,h3,h4, .menu li a { font-family: 'Dosis', sans-serif;}
+
+.bloque p , .bloque strong {  font-size: 14px;     font-family: 'Montserrat', serif;} 
+
+.bloque p, .bloque strong {
+    font-size: 13px;
+    font-family: 'Montserrat', serif;
+    line-height: 2.5em;
+    text-align: justify;
+}
+
+.bloque.direccion p {
+    
+     font-size: 12px;
+}
+
+p{ font-family: 400 100% 'Montserrat', serif; }
+
+.mm-idioma {  position: absolute;  right: 50px;  width: 110px;  background: #fff;  padding: 7px;  top: 0px;    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #b5b3b3;  font-size: 0.8em;}
+.mm-idioma li { display: inline-block;}
+
+.img_retrato {  border-radius: 50%;}
+
+
+ .claa5b, .claa5 { cursor: pointer;     width: 200px; display: inline-block;}
+.claa5b  image  { width:  100px; opacity: 0.2;}
+.claa5 image { width:  100px; opacity: 1;}
+
+.texto_claa3 {
+    opacity: 1;
+    width: 204px;
+    position: absolute;  
+    text-align: center;
+    vertical-align: middle; 
+    height: 221px;
+    background: #dddd;
+    color: #a58a00;
+    box-sizing: border-box;
+    padding: 90px 0px;
+    box-sizing: border-box;
+    margin: 0px 20px 20px 20px;
+}
+.texto_claa3:hover  { opacity: 0.1;  transition:  opacity 1s;} 
+.texto_claa3.div222 { opacity: 0.1;     border-radius: 50%;}
+.texto_claa3.div222:hover  { opacity:1;  transition:  opacity 1s;}
+
+.pbul li { margin: 20px; list-style: circle;}
+
+
+.galeria {
+    height: 482px;
+    width: 640px;
+    overflow: hidden;
+    
+} 
+
+#slider { overflow: hidden; }
+#slider figure img { width: 20%; float: left;   filter: grayscale(50%);}
+#slider figure img:hover {  filter: grayscale(0%); transform: ease scale(1.1,1.1);}
+#slider figure { position: relative;width: 500%;margin: 0; left: 0;text-align: left; font-size: 0; animation:  ease 16s sliderP infinite; }
+summary { font-size: 1.4em; cursor: pointer;}
+.cuerpo details p {font-size: 0.8em; line-height: 1.8em; }
+summary { font-size: 1.4em; cursor: pointer; padding: 5px 20px; background: #f7f7f7; border: 1px solid #e8e8e8;  margin: 5px 10px;}
+
+table, tr, td{         border: 1px solid #aaa;    padding: 5px}
+table { border-radius: 10px; margin: 20px;}
+
+h3.h3galeria { margin: 0px 0px 5px 3px; padding: 5px 20px;}
+
+@keyframes sliderP {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+60% { left: -200%; }
+70% { left: -300%; }
+85% { left: -300%; }
+100% { left: -400%; }
+
+}
+
+.bloque {
+    border-left: 1px dotted #b2b2b2;
+    border: 1px dotted #b2b2b2;
+    padding: 12px;
+    box-sizing: content-box;
+}
+
+.img1100 { padding-top:10px; width: 100%}
+
+
+@media screen and (max-width:640px){ 
+    h1{ padding: 10px; font-size: 1.2em;} 
+    .imglogo {float: left; padding: 0px 0px 0px 10px;}  
+    .imglogo img { height: 100px;}
+    #contenedor{ display: flex; width: 100%; flex-direction: column;}
+    .barralateral { order: 2;  width: 100%;}
+    .cuerpo { order: 1; width: 100%;}
+    .pie { order: 3; }
+    .mm-idioma{ right: 0px; }
+    article {padding: 5px; margin: 5px;}    
+    .texto_claa3 { width: 45%; margin: 0px 10px 10px 10px;}
+    .img_retrato{ width: 45%; margin: 0px 10px 10px 10px;}    
+    .menu li {  display: inline-block; background: #f1e2a1; width: 100%; height: 50px;}
+}
+@media screen and (max-width:1008px) and (min-width:640px){ 
+.barralateral {width: 30%;}
+.cuerpo {  width: 70%;}
+
+}
+@media screen and (min-width:1008px){ }
+
+
+
+
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+ 
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {  background: #333;  content: '';  display: block;
+  height: 100%;  position: absolute;  transition: all .2s ease-out;  width: 100%;}
+
+.header .menu-icon .navicon:before {  top: 5px;}
+.header .menu-icon .navicon:after {  top: -5px;}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+
+  .header .menu {
+    clear: none;
+    
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
